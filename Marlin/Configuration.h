@@ -178,8 +178,8 @@
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
 // For the other hotends it is their distance from the extruder 0 hotend.
-//#define HOTEND_OFFSET_X {0.0, 20.00} // (in mm) for each extruder, offset of the hotend on the X axis
-//#define HOTEND_OFFSET_Y {0.0, 5.00}  // (in mm) for each extruder, offset of the hotend on the Y axis
+#define HOTEND_OFFSET_X {0.0, -40.78} // (in mm) for each extruder, offset of the hotend on the X axis
+#define HOTEND_OFFSET_Y {0.0, -1.47}  // (in mm) for each extruder, offset of the hotend on the Y axis
 
 /**
  * Select your power supply here. Use 0 if you haven't connected the PS_ON_PIN
@@ -328,11 +328,9 @@
   //#define  DEFAULT_Ki 2.25
   //#define  DEFAULT_Kd 440
 
-  //Kp: 11.32 Ki: 0.66 Kd: 48.41
-  #define  DEFAULT_Kp 22.16
-  #define  DEFAULT_Ki 1.53
-  #define  DEFAULT_Kd 80.04
-
+  #define  DEFAULT_Kp 17.70
+  #define  DEFAULT_Ki 1.04
+  #define  DEFAULT_Kd 75.27
 
 #endif // PIDTEMP
 
@@ -378,9 +376,9 @@
   //#define  DEFAULT_bedKp 137.64
   //#define  DEFAULT_bedKi 9.86
   //#define  DEFAULT_bedKd 480.34
-  #define  DEFAULT_bedKp 271.79
-  #define  DEFAULT_bedKi 35.45
-  #define  DEFAULT_bedKd 520.98
+  #define  DEFAULT_bedKp 385.40
+  #define  DEFAULT_bedKi 44.55
+  #define  DEFAULT_bedKd 833.53
 
 #endif // PIDTEMPBED
 
@@ -499,7 +497,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 8160, 192, 192 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 8160, 200, 200 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -593,7 +591,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER 2  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 41  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.5   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.7   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -708,7 +706,7 @@
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
 #define INVERT_E0_DIR true
-#define INVERT_E1_DIR false
+#define INVERT_E1_DIR true
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 
@@ -953,8 +951,8 @@
 #define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_BED    100
 #define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
 
 //
@@ -1144,13 +1142,13 @@
 // This option overrides the default number of encoder pulses needed to
 // produce one step. Should be increased for high-resolution encoders.
 //
-#define ENCODER_PULSES_PER_STEP 1
+#define ENCODER_PULSES_PER_STEP 2
 
 //
 // Use this option to override the number of step signals required to
 // move between next/prev menu items.
 //
-#define ENCODER_STEPS_PER_MENU_ITEM 10
+#define ENCODER_STEPS_PER_MENU_ITEM 1
 
 /**
  * Encoder Direction Options
@@ -1167,7 +1165,7 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-//#define REVERSE_ENCODER_DIRECTION
+#define REVERSE_ENCODER_DIRECTION
 
 //
 // This option reverses the encoder direction for navigating LCD menus.
@@ -1175,7 +1173,7 @@
 //  If CLOCKWISE normally moves DOWN this makes it go UP.
 //  If CLOCKWISE normally moves UP this makes it go DOWN.
 //
-//#define REVERSE_MENU_DIRECTION
+#define REVERSE_MENU_DIRECTION
 
 //
 // Individual Axis Homing
@@ -1190,7 +1188,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-#define SPEAKER
+#define BUZZER
 
 //
 // The duration and frequency for the UI feedback sound.
