@@ -240,13 +240,13 @@
 
 #if LCD_HEIGHT >= 4
   // Up to 3 lines allowed
-  #define MSG_FILAMENT_CHANGE_INIT_2        _UxGT("del filamento")
-  #define MSG_FILAMENT_CHANGE_INIT_3        _UxGT("cambiar")
-  #define MSG_FILAMENT_CHANGE_INSERT_3      _UxGT("para continuar...")
+  #define MSG_FILAMENT_CHANGE_INIT_2          _UxGT("del filamento")
+  #define MSG_FILAMENT_CHANGE_INIT_3          _UxGT("cambiar")
+  #define MSG_FILAMENT_CHANGE_INSERT_3        _UxGT("para continuar...")
 #else // LCD_HEIGHT < 4
   // Up to 2 lines allowed
-  #define MSG_FILAMENT_CHANGE_INIT_2        _UxGT("del fil. cambiar")
-  #define MSG_FILAMENT_CHANGE_INSERT_1      _UxGT("Inserte filamento")
+  #define MSG_FILAMENT_CHANGE_INIT_2          _UxGT("del fil. cambiar")
+  #define MSG_FILAMENT_CHANGE_INSERT_1        _UxGT("Inserte filamento")
 #endif // LCD_HEIGHT < 4
 
 #define MSG_FILAMENT_CHANGE_UNLOAD_1        _UxGT("Esperado por")
